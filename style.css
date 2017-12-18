@@ -1,0 +1,130 @@
+form {
+    background-color: rgba(255,252,252,0.8);
+    border: solid white 2px;
+    border-radius: 30px;
+    width: 400px;
+    height: 330px;
+    margin: auto;
+    padding: 30px 30px 15px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#form {
+    font-family: 'Marmelad', sans-serif;
+    display: flex;
+    height: 100%;
+    text-align: right;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url("bg.jpg");
+}
+
+.pair {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+#send {
+    float: none;
+    background: rgba(192, 57, 43, 0.73); /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 7px 12px; /* Поля */
+    border: 1px transparent;
+    border-radius: 20px; /* Радиус скругления */
+    align-self: center;
+    margin-top: 10px;
+}
+
+#send:hover {
+    background: #c0392b; /* Цвет фона при наведении курсора */
+}
+
+input {
+    color: black;
+    width: 200px;
+    font-size: 14px;
+    font-family: 'Marmelad', sans-serif;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+    padding: 6px 0 4px 10px;
+    margin-bottom: 3px;
+
+}
+
+#dt {
+    color: #c0392b;
+}
+label {
+    height: 20px;
+    padding-right: 10px;
+}
+
+#h {
+    align-self: center;
+    font-size: 19px;
+    flex-grow: 2;
+}
+
+#personalData {
+    font-size: 14px;
+    align-self: flex-end;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    background: none;
+    margin: 3px;
+}
+
+.helper {
+    height: 0%;
+    font-size: 0px;
+    transition: 1s;
+}
+
+form {
+    background-color: rgba(255,252,252,0.8);
+    border: solid white 2px;
+    border-radius: 30px;
+    width: 400px;
+    height: 330px;
+    margin: auto;
+    padding: 30px 30px 15px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+::-webkit-input-placeholder {color:#c0392b;}
+::-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
+:-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#c0392b;}
+/*
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}*/
+
+::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
