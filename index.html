@@ -5,63 +5,75 @@
     <meta charset="UTF-8">
     <title>Check in</title>
     <link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
-    <script src="main.js" defer> </script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-<div id="form">
-    <form name="registration">
-        <label id="h"> Регистрация на сайте </label>
+<div class="form">
+    <div id="message">
+        <div id="sign" onclick="resetClick()"></div>
+    </div>
+    <div class="form">
 
-        <div class='pair'>
-            <label>Фамилия</label>
-            <input type="text" name="surname" placeholder="Введите фамилию" onkeyup="surnamePressed();"
-                   onblur="surnameBlur()" onfocus="surnameFocus()">
-            <div class="indicator" id="surname"></div>
-        </div>
-        <div class="helper" id="surnameHelper">Фамилия может состоять только из букв одной раскладки</div>
-        <div class='pair'>
-            <label>Имя</label>
-            <input type="text" name="name" placeholder="Введите имя" onkeyup="namePressed()" onfocus="nameFocus()"
-                onblur="nameBlur()">
-            <div class="indicator" id="name"></div>
-        </div>
-        <div class="helper" id="nameHelper">Имя может состоять только из букв одной раскладки</div>
-        <div class='pair'>
-            <label>Имя пользователя</label>
-            <input type="text" name="login" placeholder="Введите логин" onkeyup="loginPressed();" onblur="loginUnfocused()"
-                onfocus="loginFocus()">
-            <div class="indicator" id="login"></div>
-        </div>
-        <div class="helper" id="loginHelper">
-            Логин может состоять только из латинских букв, цифр и знака '_' и должен быть не менее 4 символов в длину и начинаться не с цифры
-        </div>
-        <div class='pair'>
-            <label>Дата рождения</label>
-            <input type="date" name="Birthday" id="dt" onchange="dateChanged();">
-            <div class="indicator" id="Birthday"></div>
-        </div>
-        <div class='pair'>
-            <label>E-mail адрес</label>
-            <input type="email" name="email" placeholder="E-mail" onkeyup="emailPressed()" onfocus="emailFocus()"
-                onblur="emailBlur()">
-            <div class="indicator" id="email"></div>
-        </div>
-        <div class="helper" id="emailHelper">E-mail Обязательно должен содержать знак @ и хотя бы одну точку</div>
-        <div class='pair'>
-            <label>Пароль</label>
-            <input type="password" name="password" placeholder="Пароль" onkeyup="passwordPressed()"
-                   onfocus="passwordFocus()" onblur="passwordBlur()">
-            <div class="indicator" id="password"></div>
-        </div>
-        <div class="helper" id="passwordHelper">Пароль должен содержать не менее 8 символов, хотя бы по одному из верхнего
-            и нижнего регистра и минимум одну цифру</div>
-        <div class='pair'>
-            <label>Повторите пароль</label>
-            <input type="password" name="passwordRepeat" placeholder="Повторите пароль" onkeyup="passwordRepeatPressed()">
-            <div class="indicator" id="passwordRepeat"></div>
-        </div>
-        <input type="button" value="Отправить" name="send" id="send">
-    </form>
-</div>
+        <form name="registration">
+            <label id="h"> Регистрация на сайте </label>
+
+            <div class='pair'>
+                <label>Фамилия</label>
+                <input type="text" name="surname" placeholder="Введите фамилию" onkeyup="surnamePressed()"
+                       onblur="surnameBlur()" onfocus="surnameFocus()">
+                <div class="indicator" id="surname"></div>
+            </div>
+            <div class="helper" id="surnameHelper">Фамилия может состоять только из букв одной раскладки</div>
+            <div class='pair'>
+                <label>Имя</label>
+                <input type="text" name="name" placeholder="Введите имя" onkeyup="namePressed()" onfocus="nameFocus()"
+                       onblur="nameBlur()">
+                <div class="indicator" id="name"></div>
+            </div>
+            <div class="helper" id="nameHelper">Имя может состоять только из букв одной раскладки</div>
+            <div class='pair'>
+                <label>Имя пользователя</label>
+                <input type="text" name="login" placeholder="Введите логин" onkeyup="loginPressed();"
+                       onblur="loginUnfocused()"
+                       onfocus="loginFocus()">
+                <div class="indicator" id="login"></div>
+            </div>
+            <div class="helper" id="loginHelper">
+                Логин может состоять только из латинских букв, цифр и знака '_' и должен быть не менее 4 символов в
+                длину и начинаться не с цифры
+            </div>
+            <div class='pair'>
+                <label>Дата рождения</label>
+                <input type="date" name="Birthday" id="dt" onchange="dateChanged();">
+                <div class="indicator" id="Birthday"></div>
+            </div>
+            <div class='pair'>
+                <label>E-mail адрес</label>
+                <input type="email" name="email" placeholder="E-mail" onkeyup="emailPressed()" onfocus="emailFocus()"
+                       onblur="emailBlur()">
+                <div class="indicator" id="email"></div>
+            </div>
+            <div class="helper" id="emailHelper">E-mail Обязательно должен содержать знак @ и хотя бы одну точку</div>
+            <div class='pair'>
+                <label>Пароль</label>
+                <input type="password" name="password" placeholder="Пароль" onkeyup="passwordPressed()"
+                       onfocus="passwordFocus()" onblur="passwordBlur()">
+                <div class="indicator" id="password"></div>
+            </div>
+            <div class="helper" id="passwordHelper">Пароль должен содержать не менее 8 символов, хотя бы по одному из
+                верхнего
+                и нижнего регистра и минимум одну цифру
+            </div>
+            <div class='pair'>
+                <label>Повторите пароль</label>
+                <input type="password" name="passwordRepeat" placeholder="Повторите пароль"
+                       onkeyup="passwordRepeatPressed()">
+                <div class="indicator" id="passwordRepeat"></div>
+            </div>
+            <div class="helper" id="formHelper">Не все поля заполнены. Пожалуйста, заполните их
+            </div>
+            <input type="button" value="Отправить" name="send" id="send" onclick="sendClick()">
+        </form>
+    </div>
 </body>
 </html>

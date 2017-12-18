@@ -12,12 +12,39 @@ form {
     align-items: stretch;
 }
 
-#form {
+.form {
     font-family: 'Marmelad', sans-serif;
     display: flex;
     height: 100%;
+    width: 100%;
     text-align: right;
+    position: absolute;
+    left: auto;
+}
 
+#message {
+    background-color: rgba(255,252,252,0.8);
+    border: solid white 2px;
+    border-radius: 30px;
+    width: 400px;
+    height: 330px;
+    margin: auto;
+    padding: 30px 30px 15px 30px;
+    z-index: -100;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sign {
+    transition: 1s width;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background: url("sent.png") round;
 }
 
 html {
@@ -27,6 +54,7 @@ html {
 body {
     height: 100%;
     background-image: url("bg.jpg");
+    position: relative;
 }
 
 .pair {
@@ -75,7 +103,7 @@ label {
 #h {
     align-self: center;
     font-size: 19px;
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 #personalData {
@@ -91,34 +119,18 @@ label {
 }
 
 .helper {
-    height: 0%;
-    font-size: 0px;
+    height: 0;
+    font-size: 0;
     transition: 1s;
+    text-align: center;
 }
 
-form {
-    background-color: rgba(255,252,252,0.8);
-    border: solid white 2px;
-    border-radius: 30px;
-    width: 400px;
-    height: 330px;
-    margin: auto;
-    padding: 30px 30px 15px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-}
+
 
 ::-webkit-input-placeholder {color:#c0392b;}
 ::-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
 :-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
 :-ms-input-placeholder      {color:#c0392b;}
-/*
-:focus::-webkit-input-placeholder {color: transparent}
-:focus::-moz-placeholder          {color: transparent}
-:focus:-moz-placeholder           {color: transparent}
-:focus:-ms-input-placeholder      {color: transparent}*/
 
 ::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
 ::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
